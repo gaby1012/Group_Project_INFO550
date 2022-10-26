@@ -11,7 +11,7 @@ library(rstatix)
 library(boot)
 library("devtools")
 library(kableExtra)
-library(ggbiplot)
+#library(ggbiplot)
 library("class")
 library("sjstats")
 library("data.table")
@@ -22,7 +22,7 @@ library("lubridate")
 here::i_am("code/ev_code/01_watch_time.R")
 
 
-absolute_path <- here::here('/data/course_engagement.csv')
+absolute_path <- here::here('data/course_engagement.csv')
 dat <- read.csv(absolute_path)
 
 #First change length from character to datetime

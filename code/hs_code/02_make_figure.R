@@ -2,7 +2,7 @@ here::i_am(
   "code/hs_code/02_make_figure.R"
 )
 library(ggplot2)
-
+library(tidyverse)
 
 df <- readRDS(
   file = here::here("data/data_clean.rds")

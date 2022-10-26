@@ -1,1 +1,62 @@
-TODO
+---
+title: Engagement Report
+author: Gaby, Eric, Anyue, Huiqing 
+output: html_document
+---
+
+```{r, include = FALSE}
+
+here::i_am(
+  "Final_Report.Rmd"
+)
+```
+
+# Huiqing
+Table 1.
+```{r}
+table_one <- readRDS(
+  here::here("output/table_one.rds")
+)
+table_one
+```
+
+Table 2.
+```{r}
+table_two <- readRDS(
+  here::here("output/table_two.rds")
+)
+table_two
+```
+
+Figure 1.
+```{r}
+knitr::include_graphics("output/figure.png")
+```
+
+# Anyue
+```{r figure_data, echo = FALSE, child = "code/ar_code/ruan_code.Rmd"}
+
+```
+
+# Eric
+Table 1.
+```{r}
+table_one_ev <- readRDS(
+  here::here("output/EVIERtable_one.rds")
+)
+table_one_ev
+```
+
+Table 2.
+```{r}
+table_two_ev <- readRDS(
+  here::here("output/EVIERtable_two.rds")
+)
+table_two_ev
+```
+
+Figure 1.
+```{r}
+knitr::include_graphics(here::here("output/EVIERscatterplot.png"))
+```
+
