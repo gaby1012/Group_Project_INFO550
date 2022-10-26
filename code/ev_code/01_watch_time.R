@@ -9,19 +9,20 @@ library(dplyr)
 library(ggpubr)
 library(rstatix)
 library(boot)
-library(devtools)
+library("devtools")
 library(kableExtra)
 library(ggbiplot)
-library(class)
-library(sjstats)
-library(data.table)
-library(ggiraph)
-library(patchwork)
+library("class")
+library("sjstats")
+library("data.table")
+library("ggiraph")
+library("patchwork")
+library("lubridate")
 
-here::i_am("code/01_watch_time.R")
+here::i_am("code/ev_code/01_watch_time.R")
 
 
-absolute_path <- here::here('data/course_engagement.csv')
+absolute_path <- here::here('/data/course_engagement.csv')
 dat <- read.csv(absolute_path)
 
 #First change length from character to datetime
@@ -48,7 +49,7 @@ table1
 table2 <- dat %>% 
   select("views", "topic", "length") %>%
   tbl_summary(by = topic) %>% 
-  modify_spanning_header(c("stat_1", "stat_2") ~ "**Texture Features by Treatment (Irradiated or Control)**") %>%
+  modify_spanning_header(c("stat_1", "stat_2") ~ "**Views and Length by Topics**") %>%
   add_overall() %>%
   add_p()
 table2
