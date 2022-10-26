@@ -1,0 +1,72 @@
+---
+title: "Ruan Code"
+author: "Anyue Ruan"
+date: "2022-10-13"
+output: html_document
+---
+
+```{r, loaddata, include=FALSE}
+course_engagement <- read.csv("C:/Users/Anyue/OneDrive/Desktop/CLASS/Emory/Semester 3/INFO 550/Engagement report/course_engagement.csv")
+course_engagement2 <- read.csv("C:/Users/Anyue/OneDrive/Desktop/CLASS/Emory/Semester 3/INFO 550/Engagement report/course_engagement.csv")
+```
+
+#Examine the correlation between length of video and engagement
+#  Using regression to plot and analyze the correlation between length of video and engagement
+
+```{r}
+library(labelled)
+library(gtsummary)
+library(lubridate)
+
+course_engagement$length <- (as.numeric(ms(course_engagement$length)))
+course_engagement$length[4] <- (as.numeric(hms(course_engagement2$length[4])))
+course_engagement$length <- round(x=(course_engagement$length)/60,digits = 2)
+```
+
+```{r}
+#course <- course_engagement[is.na(course_engagement)] <- 0
+
+# Creating the plot
+plot(course_engagement$length ~ course_engagement$unique_viewers, pch = 19, col = "lightblue")
+
+# Regression line
+abline(lm(course_engagement$length ~ course_engagement$unique_viewers), col = "red", lwd = 3)
+```
+
+```{r}
+analyze <- lm(course_engagement$length ~ course_engagement$unique_viewers)
+```
+
+
+
+
+
+
+#Study time trends of engagement over weeks of class
+#  Analyzing the tendency by doing regression as well
+```{r}
+plot(course_engagement$length ~ course_engagement$views, pch = 19, col = "lightblue")
+abline(lm(course_engagement$length ~ course_engagement$views), col = "red", lwd = 3)
+```
+```{r}
+analyze <- lm(course_engagement$length ~ course_engagement$views)
+```
+
+
+
+
+
+
+#Study time trends of engagement through each week
+#  Analyzing the tendency by doing regression as well
+```{r}
+plot(course_engagement$length ~ course_engagement$week, pch = 19, col = "lightblue")
+abline(lm(course_engagement$length ~ course_engagement$week), col = "red", lwd = 3)
+```
+```{r}
+lm(course_engagement$length ~ course_engagement$week)
+```
+
+
+
+
