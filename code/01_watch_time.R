@@ -17,7 +17,7 @@ library(sjstats)
 library(data.table)
 library(ggiraph)
 library(patchwork)
-setwd('/Users/edviera23/Downloads/Fall_2022/INFO 550/INFO550_Workspace/Group_Project_INFO550')
+
 here::i_am("code/01_watch_time.R")
 
 
