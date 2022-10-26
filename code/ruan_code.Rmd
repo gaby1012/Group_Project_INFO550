@@ -49,7 +49,7 @@ plot(course_engagement$length ~ course_engagement$views, pch = 19, col = "lightb
 abline(lm(course_engagement$length ~ course_engagement$views), col = "red", lwd = 3)
 ```
 ```{r}
-lm(course_engagement$length ~ course_engagement$views)
+analyze <- lm(course_engagement$length ~ course_engagement$views)
 ```
 
 
