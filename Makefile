@@ -1,3 +1,7 @@
+export ENG_PATH := data/course_engagement.csv
+export DISPLAY_CODE := FALSE
+export COLOR_PALETTE := 999999 E69F00 56B4E9 009E73 F0E442 0072B2 D55E00 CC79A7
+
 report.html: Final_Report.Rmd hstb1 hstb2 hsfig ev
 	Rscript render_report.R
 	
@@ -12,7 +16,12 @@ hsfig:
 	
 ev: 
 	Rscript code/ev_code/01_watch_time.R
+
 	
+.PHONY: install 
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
+
 .PHONY: clean
 clean:
 	rm -f Final_Report.html

@@ -6,8 +6,9 @@ output: html_document
 ---
 
 ```{r, loaddata, include=FALSE}
-course_engagement <- read.csv(here::here("data/course_engagement.csv"))
-course_engagement2 <-read.csv(here::here("data/course_engagement.csv"))
+data_filepath = Sys.getenv("ENG_PATH")
+course_engagement <- read.csv(here::here(data_filepath))
+course_engagement2 <-read.csv(here::here(data_filepath))
 ```
 
 #Examine the correlation between length of video and engagement

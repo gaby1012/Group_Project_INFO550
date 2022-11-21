@@ -2,8 +2,10 @@ here::i_am(
   "code/hs_code/data.R"
 )
 
+data_filepath = Sys.getenv("ENG_PATH") 
+
 df<-read.csv(
-  here::here("data/course_engagement.csv"))
+  here::here(data_filepath))
 
 for(i in 2:nrow(df)) {
   if(df$length[i] == "01:04:56"){

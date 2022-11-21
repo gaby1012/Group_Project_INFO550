@@ -18,4 +18,13 @@ This is an R-script to render the Project.Rmd file.
 This makefile sets the rules for making the final report.
 
 # TO RUN
-To run, all you wil need to do is run 'make' while in the Project Folder.
+To run, all you wil need to do is run 'make' while in the Project Folder. 
+
+## Customization - Dataset
+You have the option to specific a new dataset to run the report on. The only constraint is that it must be contained in the project folder. To specify a dataset other than the default, run  make ENG_PATH={pathname}. 
+
+## Customization - Display
+You have the option to specify whether or not the code chunks display in the final report. The default is FALSE but switch to true with make DISPLAY_CODE=TRUE.
+
+## Customization - Color Palette
+You can also specify the color palette used in the main bar graph. The default is the colorblind palette but you can change it by using  make COLOR_PALETTE={palette} and send the color palette in form (num num num num). Exclude the #s from the list). 

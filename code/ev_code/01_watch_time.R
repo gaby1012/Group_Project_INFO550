@@ -21,8 +21,10 @@ library("lubridate")
 
 here::i_am("code/ev_code/01_watch_time.R")
 
+data_filepath = Sys.getenv("ENG_PATH")
 
-absolute_path <- here::here('data/course_engagement.csv')
+
+absolute_path <- here::here(data_filepath)
 dat <- read.csv(absolute_path)
 
 #First change length from character to datetime
@@ -68,7 +70,8 @@ barplot <-
   ) +
   ylab("") +
   xlab("") +
-  coord_flip()
+  coord_flip() +
+  scale_colour_manual(values=Sys.getenv("COLOR_PALETTE"))
 datrev <- dat %>%
   mutate(
     tooltip_text = paste0(toupper(topic), "\n", 
@@ -86,7 +89,7 @@ latest_bar <- ggplot(datrev, aes(x = reorder(topic, length),
   ) +
   ylab("") +
   xlab("") +
-  coord_flip()
+  coord_flip() + scale_colour_manual(values=Sys.getenv("COLOR_PALETTE"))
 
 (girafe(ggobj = latest_bar, width_svg = 5, height_svg = 4))
 ##We can save this figure using the ggplot package as well

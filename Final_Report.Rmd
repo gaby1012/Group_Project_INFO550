@@ -4,11 +4,13 @@ author: Gaby, Eric, Anyue, Huiqing
 output: html_document
 ---
 
-```{r, include = FALSE}
+```{r echo = FALSE}
 
 here::i_am(
   "Final_Report.Rmd"
 )
+display = easyr::tobool(Sys.getenv("DISPLAY_CODE"))
+knitr::opts_chunk$set(echo = display)
 ```
 
 # Huiqing
