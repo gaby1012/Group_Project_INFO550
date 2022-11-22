@@ -36,20 +36,12 @@ knitr::include_graphics("output/figure.png")
 ```
 
 # Anyue
-a: video length vs unique viewers.
-```{r}
-plota <- readRDS(
-  here::here("output/plota.rds")
-)
-plota
-```
+a: Video length vs unique viewers.
 
 ```{r}
-linea <- readRDS(
-  here::here("output/linea.rds")
-)
-linea
+knitr::include_graphics(here::here("output/linea.png"))
 ```
+
 
 ```{r}
 analyzea <- readRDS(
@@ -59,18 +51,9 @@ analyzea
 ```
 
 b: Study time trends of engagement over weeks of class
-```{r}
-plotb <- readRDS(
-  here::here("output/plotb.rds")
-)
-plotb
-```
 
 ```{r}
-lineb <- readRDS(
-  here::here("output/lineb.rds")
-)
-lineb
+knitr::include_graphics(here::here("output/lineb.png"))
 ```
 
 ```{r}
@@ -81,18 +64,9 @@ analyzeb
 ```
 
 c: Study time trends of engagement through each week.
-```{r}
-plotc <- readRDS(
-  here::here("output/plotc.rds")
-)
-plotb
-```
 
 ```{r}
-linec <- readRDS(
-  here::here("output/linec.rds")
-)
-linec
+knitr::include_graphics(here::here("output/linec.png"))
 ```
 
 ```{r}
