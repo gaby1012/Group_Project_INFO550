@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.2.1",
+    "Version": "4.2.0",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -316,6 +316,14 @@
         "rematch",
         "tibble"
       ]
+    },
+    "chron": {
+      "Package": "chron",
+      "Version": "2.3-58",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c199244c7fb95c291e301ba8a48293d8",
+      "Requirements": []
     },
     "class": {
       "Package": "class",

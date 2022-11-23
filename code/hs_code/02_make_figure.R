@@ -20,7 +20,7 @@ cp_list <- paste("#", cp_list, sep="")
 fig<- ggplot(agg_tbl, aes(x=factor(topic), weight=sum_time,fill=topic))+
   geom_bar()+
   ggtitle("Topic vs. Time Length (min)") +
-  xlab("Topic") + ylab("Time Length (min)") + theme(plot.title = element_text(hjust = 0.5)) + scale_fill_manual(values=cp_list)
+  xlab("Topic") + ylab("Time Length (min)") + theme(plot.title = element_text(hjust = 0.5)) 
 
 
 
