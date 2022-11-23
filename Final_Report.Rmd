@@ -9,7 +9,8 @@ output: html_document
 here::i_am(
   "Final_Report.Rmd"
 )
-display = easyr::tobool(Sys.getenv("DISPLAY_CODE"))
+
+display =  as.logical(Sys.getenv("DISPLAY_CODE"))
 knitr::opts_chunk$set(echo = display)
 ```
 

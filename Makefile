@@ -1,5 +1,5 @@
 export ENG_PATH := data/course_engagement.csv
-export DISPLAY_CODE := FALSE
+export DISPLAY_CODE := F
 export COLOR_PALETTE := 999999 E69F00 56B4E9 009E73 F0E442 0072B2 D55E00 CC79A7
 
 report.html: Final_Report.Rmd hsdata hstb1 hstb2 hsfig ev ar
